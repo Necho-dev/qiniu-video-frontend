@@ -1,19 +1,22 @@
+<script setup>
+import Header from '@/components/Header.vue'
+
+</script>
+
 <template>
 	<div class="root">
 		<div class="navigation">
 			<div class="navigation-content"/>
 		</div>
 		<div class="header">
-			<div class="header-content"/>
+			<Header></Header>
 		</div>
 		<div class="content">
-			<div class="main-content"/>
+			<router-view/>
 		</div>
 	</div>
 </template>
-<script>
 
-</script>
 <style scoped>
 .root {
 	width: 100vw;
@@ -48,7 +51,6 @@
 	left: 160px;
 	width: calc(100% - 170px);
 	height: calc(100% - 71px);
-	border-radius: 15px;
 	margin: 3px 5px;
 	padding: 20px 25px;
 	overflow: hidden;
