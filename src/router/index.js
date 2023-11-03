@@ -1,6 +1,7 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
 import Layout from '@/layout/Main.vue'
-import Player from '@/views/Player.vue'
+import Recommend from '@/views/Recommend.vue'
+import Class from '@/views/Class.vue'
 
 const routes = [
     {
@@ -8,11 +9,14 @@ const routes = [
         component: Layout,
         children: [
             {
-                path: '',
-                component: Player
+                path: '/',
+                component: Recommend
             },
-
-        ],
+            {
+                path: '/class',
+                component: Class
+            }
+        ]
     },
 ]
 
