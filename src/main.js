@@ -1,8 +1,8 @@
 import {createApp} from 'vue'
 import App from './App.vue'
 // 注册样式组件
-import Antd from 'ant-design-vue';
-import 'ant-design-vue/dist/reset.css';
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 // 注册字体文件
 import './assets/font/font.css';
 // 注册状态管理组件
@@ -14,7 +14,7 @@ const app = createApp(App);
 const pinia = createPinia();
 
 
-app.use(Antd)
 app.use(pinia)
 app.use(router)
+app.use(ElementPlus)
 app.mount('#app')

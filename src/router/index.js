@@ -1,7 +1,7 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
 import Layout from '@/layout/Main.vue'
 import Recommend from '@/views/Recommend.vue'
-import Class from '@/views/Class.vue'
+import Video from '@/views/Video.vue'
 
 const routes = [
     {
@@ -10,14 +10,17 @@ const routes = [
         children: [
             {
                 path: '/',
+                name: 'Home',
                 component: Recommend
-            },
-            {
-                path: '/class',
-                component: Class
             }
         ]
     },
+    {
+        path: '/:id',
+        name: 'Work',
+        component: Video,
+        meta: {transition: 'slide-right'}
+    }
 ]
 
 export default createRouter({
